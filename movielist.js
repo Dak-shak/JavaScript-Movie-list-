@@ -35,3 +35,21 @@ function markAsWatched(movieid) {
 }
 markAsWatched(1);
 markAsWatched(2);
+
+// List by genre or watched status
+// function listByGenre(genre) {
+//   let filtered = movies.filter(movie => movie.genre.toLowerCase() === genre.toLowerCase());
+//   console.log(`Movies in genre "${genre}":`, filtered);
+// }
+
+
+// list by  watched status
+
+function listByWatchedStatus(isWatched) {
+  const filtered = movies.filter(movie => movie.watched === isWatched);
+  const status = isWatched ? "Watched" : "Unwatched";
+  console.log(`${status} Movies:`, filtered);
+}
+listByGenre("animation");
+listByGenre("action");
+listByGenre("comedy");
