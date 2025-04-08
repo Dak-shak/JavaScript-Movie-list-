@@ -53,3 +53,23 @@ function listByWatchedStatus(isWatched) {
 listByGenre("animation");
 listByGenre("action");
 listByGenre("comedy");
+
+function sortByYear() {
+  movies.sort((a, b) => a.year-b.year);
+  console.log("Movies sorted by year:", movies);
+}
+sortByYear(movies);
+
+// function deleteMovie(movieid) {
+//   movies = movies.filter(movie => movie.id !== movieid);
+//   console.log(`Movie with ID ${movieid} deleted.`);
+// }
+// deleteMovie(1); 
+
+
+function deleteMovie(movieid) {
+  movies = movies.filter(movie => movie.id !== movieid);
+  console.log(`Movie with ID ${movieid} deleted.`);
+  console.log("Updated movie list:", movies);
+}
+deleteMovie(1);
